@@ -5,7 +5,7 @@
 }
 .custom-container {
     position: fixed;
-    top: 55%;
+    top: 60%;
     left: 20%;
     transform: translate(-50%, -50%);
     max-width: 400px; /* Adjust the max-width as per your preference */
@@ -40,4 +40,12 @@
   .social-icons .fa {
     font-size: 28px;
     margin: 0 5px;
+  }
+
+  .paragraph {
+    max-width: 600px;
+    width: 90%;
+    text-align: justify;
+    font-size: 13px;
+
   }
