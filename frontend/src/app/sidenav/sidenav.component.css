@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.container{
+    font-family: 'Crimson Text', serif;
+}
+.custom-container {
+    position: fixed;
+    top: 55%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    max-width: 400px; /* Adjust the max-width as per your preference */
+    padding: 20px;
+    box-shadow: 0 2px 2px rgba(122, 120, 120, 0.1);
+    background-color: #fff;
+    z-index: 100; /* Add a higher z-index to make the fixed card appear above other elements */
+  }
+
+  .custom-container img{
+    text-align: center;
+    margin: 20px;
+  }
+  .card-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .card-text {
+    margin-top: 16px;
+    color: #444;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .social-icons .fa {
+    font-size: 28px;
+    margin: 0 5px;
+  }
