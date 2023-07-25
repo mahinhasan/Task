@@ -3,22 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { AccountComponent } from './account/account.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { HeaderComponent } from './header/header.component';
-import { ProjectsComponent } from './main/projects/projects.component';
-import { ShowProjectsComponent } from './main/projects/show-projects/show-projects.component';
-import { CrudProjectsComponent } from './main/projects/crud-projects/crud-projects.component';
-import { LoginComponent } from './account/login/login.component';
-import { RegisterComponent } from './account/register/register.component';
-import { ContactComponent } from './main/contact/contact.component';
-import { ToursComponent } from './main/tours/tours.component';
-import { IcortexComponent } from './main/icortex/icortex.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedService } from './service/shared.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './main/profile/profile.component';
+import { MainComponent } from './main/main.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { IcortexComponent } from './main/profile/icortex/icortex.component';
+import { ToursComponent } from './main/profile/tours/tours.component';
+import { ContactComponent } from './main/profile/contact/contact.component';
+import { LoginComponent } from './account/login/login.component';
+import { CrudProjectsComponent } from './main/profile/projects/crud-projects/crud-projects.component';
+import { ShowProjectsComponent } from './main/profile/projects/show-projects/show-projects.component';
+import { ProjectsComponent } from './main/profile/projects/projects.component';
+import { AccountComponent } from './account/account.component';
+import { HeaderComponent } from './header/header.component';
+import { RegisterComponent } from './account/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     ContactComponent,
     ToursComponent,
-    IcortexComponent
+    IcortexComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     FontAwesomeModule,
     HttpClientModule,
+    AppRoutingModule
   
   ],
   providers: [SharedService],

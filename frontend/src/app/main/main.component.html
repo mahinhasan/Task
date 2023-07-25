@@ -10,9 +10,9 @@
             <div class="information" (click)="OpenInfo()">
                 <div class="mail">
                     <i class="far fa-envelope fa-2xs" id="email-icon"></i>
-                    <i class="fas fa-mobile-alt" id="number-icon"></i>
-
+                    <i class="fas fa-map-marker-alt fa-2xs" id="location-icon"></i>
                 </div>
+                
             </div>
 
         </div>
@@ -24,8 +24,8 @@
                     <span id="email-info">mhasan.cse.aiub@gmail.com</span>
                 </div>
                 <div class="number">
-                    <i class="fas fa-mobile-alt" id="number-icon"></i>
-                    <span id="number-info">+880-1315091449</span>
+                    <i class="fas fa-map-marker-alt fa-2xs" id="number-icon"></i>
+                    <span id="number-info">Kuril,Dhaka</span>
                 </div>
             </div>
         </div>
@@ -61,10 +61,10 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a routerLink="/home/projects">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a routerLink="/home/contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -73,17 +73,6 @@
 
 
 
-
-
-    <script>
-        document.getElementById("email-icon").addEventListener("click", function () {
-            const emailInfo = document.getElementById("email-info");
-            emailInfo.classList.toggle("show");
-        });
-
-        document.getElementById("number-icon").addEventListener("click", function () {
-            const numberInfo = document.getElementById("number-info");
-            numberInfo.classList.toggle("show");
-        });
-    </script>
 </body>
+
+
