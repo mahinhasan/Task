@@ -9,4 +9,5 @@ urlpatterns = [
     path('',include('blog.urls')),
     path('api/',include('api.urls')),
     path('api/portfolio/',include('portfolio.urls')),
+    path('api/accounts/',include('accounts.urls'))
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

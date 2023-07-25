@@ -12,12 +12,18 @@ export class SharedService {
   constructor(private http: HttpClient) { }
 
   getProjects(): Observable<any[]> {
-    let x = this.http.get<any[]>(this.apiURL + 'api/portfolio/projects');
-    console.log(x);
-    return x;
+    return this.http.get<any[]>(this.apiURL + 'api/portfolio/projects');
+    
   }
 
   getImageData(imageFileName: string): Observable<any> {
     return this.http.get<any>(this.apiURL + 'api/portfolio/projects/getImage/' + imageFileName);
   }
+
+// Super User
+
+  getSuperUser():Observable<any[]>{
+    return this.http.get<any[]>(this.apiURL + 'api/accounts/superusers/');
+  }
+
 }

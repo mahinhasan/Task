@@ -1,2 +1,89 @@
-<app-projects></app-projects>
-<router-outlet></router-outlet>
+<body>
+    <div class="custom-container">
+        <div class="profile-image">
+            <img src="../../assets/01315091449.JPG" alt="My Image">
+        </div>
+        <h1 *ngIf="myname">
+            {{myname}}
+        </h1>
+        <div class="info" *ngIf="!showInfo">
+            <div class="information" (click)="OpenInfo()">
+                <div class="mail">
+                    <i class="far fa-envelope fa-2xs" id="email-icon"></i>
+                    <i class="fas fa-mobile-alt" id="number-icon"></i>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <div *ngIf="showInfo">
+            <div class="information" (click)="OpenInfo()">
+                <div class="mail">
+                    <i class="far fa-envelope" id="email-icon"></i>
+                    <span id="email-info">mhasan.cse.aiub@gmail.com</span>
+                </div>
+                <div class="number">
+                    <i class="fas fa-mobile-alt" id="number-icon"></i>
+                    <span id="number-info">+880-1315091449</span>
+                </div>
+            </div>
+        </div>
+
+        <p>Python django developer</p>
+        <div class="social-icons">
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="cv">
+            <button (click)="downloadPdf()">DOWNLOAD CV</button>
+          </div>
+
+        <footer>
+            <div *ngIf="!navlist">
+                <div class="bar" (mouseenter)="navList(true)">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <nav *ngIf="navlist">
+                <ul (mouseleave)=" navList(false)">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+
+
+
+
+    <script>
+        document.getElementById("email-icon").addEventListener("click", function () {
+            const emailInfo = document.getElementById("email-info");
+            emailInfo.classList.toggle("show");
+        });
+
+        document.getElementById("number-icon").addEventListener("click", function () {
+            const numberInfo = document.getElementById("number-info");
+            numberInfo.classList.toggle("show");
+        });
+    </script>
+</body>
