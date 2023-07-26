@@ -1,3 +1,5 @@
+
+  
 <body>
     <div class="custom-container">
         <div class="profile-image">
@@ -12,9 +14,7 @@
                     <i class="far fa-envelope fa-2xs" id="email-icon"></i>
                     <i class="fas fa-map-marker-alt fa-2xs" id="location-icon"></i>
                 </div>
-                
             </div>
-
         </div>
         
         <div *ngIf="showInfo">
@@ -46,33 +46,33 @@
             <button (click)="downloadPdf()">DOWNLOAD CV</button>
           </div>
 
-        <footer>
+          <footer>
             <div *ngIf="!navlist">
-                <div class="bar" (mouseenter)="navList(true)">
-                    <i class="fas fa-bars"></i>
-                </div>
+              <div class="bar" (mouseenter)="navList(true)">
+                <i class="fas fa-bars" style="color: #636161; font-size: 24px; transition: all 0.2s ease-in-out;"></i>
+              </div>
             </div>
             <nav *ngIf="navlist">
-                <ul (mouseleave)=" navList(false)">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a routerLink="/home/projects">Projects</a>
-                    </li>
-                    <li>
-                        <a routerLink="/home/contact">Contact</a>
-                    </li>
-                </ul>
+              <ul (mouseleave)="navList(false)">
+                <li class="show">
+                  <a href="">Home</a>
+                </li>
+                <li class="show">
+                  <a href="/main/profile/tours">Tours</a>
+                </li>
+                <li class="show">
+                  <a routerLink="/main/profile/projects">Projects</a>
+                </li>
+                <li class="show">
+                  <a routerLink="/main/profile/contact">Contact</a>
+                </li>
+              </ul>
             </nav>
-        </footer>
+          </footer>
+          
+          
     </div>
-
-
-
 </body>
+<router-outlet></router-outlet>
 
 
