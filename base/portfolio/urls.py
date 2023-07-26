@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import*
 urlpatterns = [
     # path('create/',views.project_alt_view),
     # path('<int:pk>/',views.project_alt_view,),
@@ -10,6 +11,6 @@ urlpatterns = [
     path('projects/saveFile/',views.saveFile),
     # path('projects/getFile/<int:id>/', views.getFile, name='get_file'),
     path('projects/getImage/<str:filename>/', views.getImage, name='get_image'),
-
+    path('contact/',views.contact_me,name='contact'),
 ]
 

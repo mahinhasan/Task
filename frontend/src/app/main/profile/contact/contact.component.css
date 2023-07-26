@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+.contact .card-body{
+    border: none;
+}
+
+.head{
+    margin: 50px;
+    font-family: 'Mukta', sans-serif;
+
+}
+
+.head h4{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.head p{
+    font-size: 14px;
+    
+}
+.contact{
+    height:60vh;
+    margin: 50px;
+}
+.contact .text-left{
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
+}
+.contact .card  {
+    margin-top: 60px;
+}
+.contact .card  .card-body form .form-group{
+    margin-top: 20px;
+}
+.contact .card  .card-body form .form-group label{
+    margin-bottom: 10px;
+}
+
+.contact .card  .card-body form button{
+    margin-top: 10px;
+}
+.info .col-md-4{
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+
+    margin-right: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 14;
+    justify-content: space-between;
+
+}
+
+/* Add this CSS in your component's CSS file (contact.component.css) or styles.css */
+.form-control {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .footer{
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+  }
+  

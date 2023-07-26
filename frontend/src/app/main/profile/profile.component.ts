@@ -52,4 +52,11 @@ export class ProfileComponent {
     this.showInfo = !this.showInfo;
 
   }
+
+  showDropdown = false;
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+  }
+
 }

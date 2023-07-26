@@ -14,3 +14,12 @@ class Projects(models.Model):
     # @property
     # def my_fixed_repo(self):
     #     return "www.github.com/mahinhasan/django-api-project"
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=200)
+    content = models.TextField(blank=True,null=True)
+    email = models.CharField(max_length=250)
+
+    def __str__(self) ->str:
+        return self.name

@@ -24,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './account/register/register.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
 
     BrowserAnimationsModule,
+    FormsModule,
   
   ],
   providers: [SharedService],

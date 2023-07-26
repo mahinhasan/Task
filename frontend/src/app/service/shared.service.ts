@@ -26,4 +26,10 @@ export class SharedService {
     return this.http.get<any[]>(this.apiURL + 'api/accounts/superusers/');
   }
 
+  submitContact(data :any){
+    console.log("Service");
+    return this.http.post(this.apiURL + 'api/portfolio/contact/',data);
+    
+  }
+
 }

@@ -1,1 +1,74 @@
-<p>contact works!</p>
+<div class="container">
+    <div class="head">
+        <h4>LET'S TALK WHATEVER IN OUR MIND.</h4>
+        <p> If you have any questions, collaboration opportunities, or project ideas that you'd like to discuss,<br> feel
+            free to get in touch with me.I'm always open to connecting with fellow developers, industry professionals,
+            and enthusiasts.</p>
+    </div>
+    <div class="row info justify-content-center">
+        <div class="col-md-4">
+            <h5>Call Me</h5>
+            <small>+880-1315091449</small>
+        </div>
+        <div class="col-md-4">
+            <h5>Email</h5>
+            <small>mahinhasanaiub@gmail.com</small>
+        </div>
+    </div>
+    <hr>
+    <div class="contact">
+        <div class="row mt-5">
+            <!-- Left side: Some Text -->
+            <div class="col-md-6">
+                <div class="text-left mt-5">
+                    <h2>Let's Get In Touch</h2>
+                    <p>
+                        Address: Kuril, Khilkhet, Dhaka-1229, Bangladesh
+                      </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1826.9993796027813!2d90.41727165797168!3d23.8240529971594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bfddc62a88ef%3A0x3e82006bb90815b8!2sKuril%2C%20Khilkhet%2C%20Dhaka%201229!5e0!3m2!1sen!2sbd!4v1656366193699!5m2!1sen!2sbd" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+            </iframe>
+                </div>
+            </div>
+
+            <!-- Right side: Contact Form -->
+            <div class="col-md-6">
+                <div class="card border-0">
+                  
+                    <div class="card-body">
+                        <form #contact="ngForm" (ngSubmit)="contactForm(contact.value)">
+                            <!-- Name field -->
+                            <div class="form-group">
+                                <!-- <label for="name">Enter Your Name</label> -->
+                                <input type="text" class="form-control border-0" id="name" name="name"
+                                    placeholder="Full name" required ngModel>
+                            </div>
+                            <!-- Content field -->
+                            <div class="form-group">
+                                <!-- <label for="content">Write Your Message</label> -->
+                                <textarea class="form-control border-0" id="content" ngModel name="content" rows="4"
+                                    placeholder="Your Message" required></textarea >
+                            </div>
+                            <!-- Email field -->
+                            <div class="form-group">
+                                <!-- <label for="email">Enter Your Email</label> -->
+                                <input type="email" class="form-control border-0" ngModel id="email" name="email"
+                                    placeholder="Enter Your gmail" required>
+                            </div>
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-secondary btn-block">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-5">
+        <p>Copyright @icortex. All Rights Reserved 2023</p>
+      </footer>
+
+</div>

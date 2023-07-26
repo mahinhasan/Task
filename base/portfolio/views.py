@@ -11,9 +11,8 @@ from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.parsers import JSONParser
-from .models import Projects
-from .serializers import ProjectsSerializer
+from .models import Projects,Contact
+from .serializers import ProjectsSerializer,ContactSerializer
 from django.core.files.storage import default_storage
 import os
 from django.http import HttpResponseNotFound, FileResponse
@@ -84,6 +83,18 @@ def getImage(request, filename):
     else:
         # Return a 404 Not Found response if the file does not exist.
         return HttpResponseNotFound("Image not found.")
+
+@csrf_exempt
+def contact_me(request):
+
+    if request.method == 'POST':
+        contact_data = JSONParser().parse(request)
+        contact_serializer = ContactSerializer(data=contact_data)
+        if contact_serializer.is_valid():
+            contact_serializer.save()
+            return JsonResponse("Project added successfully", safe=False, status=201)
+        return JsonResponse(contact_serializer.errors, safe=False, status=400)
+    return JsonResponse("Method not allowed", safe=False, status=405)
 
 
 # class ProjectUpdateAPIView(generics.UpdateAPIView):

@@ -1,69 +1,80 @@
 <!-- profile.component.html -->
-
-
-
 <div class="profile-container">
     <!-- Top Navbar -->
     <nav class="top-navbar">
-      <ul>
-        <li><a routerLink="/account/login">Login</a></li>
-        <li><a routerLink="/account/register">Register</a></li>
-      </ul>
+        <ul>
+            <li class="show">
+                <a routerLink="/main">Home</a>
+            </li>
+            <li class="show">
+                <a routerLink="/main/profile/projects">Projects</a>
+            </li>
+            <li class="show" routerLinkActive="active">
+                <a routerLink="/main/profile/contact">Contact</a>
+            </li>
+            <li class="show">
+                <a routerLink="/main/profile/tours">Tours</a>
+              </li>
+            <li><a routerLink="/account/login">Login</a></li>
+            <li><a routerLink="/account/register">Register</a></li>
+                
+        </ul>
     </nav>
-  
+
     <!-- Main Content Area -->
     <div class="content">
-      <!-- Left Navbar -->
-      <nav class="left-navbar">
-        <div class="profile-image">
-            <img src="../../assets/01315091449.JPG" alt="My Image">
-        </div>
-        <h1 *ngIf="myname">
-            {{myname}}
-        </h1>
-        <div class="info" *ngIf="!showInfo">
-            <div class="information" (click)="OpenInfo()">
-                <div class="mail">
-                    <i class="far fa-envelope fa-2xs" id="email-icon"></i>
-                    <i class="fas fa-map-marker-alt fa-2xs" id="location-icon"></i>
+        <!-- Left Navbar -->
+        <nav class="left-navbar">
+            <div class="profile-image">
+                <img src="../../assets/01315091449.JPG" alt="My Image">
+            </div>
+            <h1 *ngIf="myname">
+                {{myname}}
+            </h1>
+            <div class="info" *ngIf="!showInfo">
+                <div class="information" (click)="OpenInfo()">
+                    <div class="mail">
+                        <i class="far fa-envelope fa-2xs" id="email-icon"></i>
+                        <i class="fas fa-map-marker-alt fa-2xs" id="location-icon"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div *ngIf="showInfo">
-            <div class="information" (click)="OpenInfo()">
-                <div class="mail">
-                    <i class="far fa-envelope" id="email-icon"></i>
-                    <span id="email-info">mhasan.cse.aiub@gmail.com</span>
-                </div>
-                <div class="number">
-                    <i class="fas fa-map-marker-alt fa-2xs" id="number-icon"></i>
-                    <span id="number-info">Kuril,Dhaka</span>
+
+            <div *ngIf="showInfo">
+                <div class="information" (click)="OpenInfo()">
+                    <div class="mail">
+                        <i class="far fa-envelope" id="email-icon"></i>
+                        <span id="email-info">mhasan.cse.aiub@gmail.com</span>
+                    </div>
+                    <div class="number">
+                        <i class="fas fa-map-marker-alt fa-2xs" id="number-icon"></i>
+                        <span id="number-info">Kuril,Dhaka</span>
+                    </div>
                 </div>
             </div>
+            <p>Python django developer</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/m8838" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="www.linkedin.com/in/mhmahin" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mahinhasan" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="cv">
+                <button (click)="downloadPdf()">DOWNLOAD CV</button>
+            </div>
+        </nav>
+
+        <!-- Data Display Area -->
+        <div class="data-area">
+            <!-- The child routes will be displayed here -->
+            <router-outlet></router-outlet>
         </div>
-        <p>Python django developer</p>
-        <div class="social-icons">
-            <a href="#" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <div class="cv">
-            <button (click)="downloadPdf()">DOWNLOAD CV</button>
-          </div>
-      </nav>
-      
-      <!-- Data Display Area -->
-      <div class="data-area">
-        <!-- The child routes will be displayed here -->
-        <router-outlet></router-outlet>
-      </div>
     </div>
-  </div>
-  
+</div>
+
+

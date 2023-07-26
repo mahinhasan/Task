@@ -1,8 +1,12 @@
 /* profile.component.css (or styles.css) */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+
 .profile-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 50vh;
+    
   }
   
   .content {
@@ -15,6 +19,10 @@
     padding: 10px;
     flex: 0 0 20%;
     min-width: 150px;
+    margin-top: 60px;
+    /* margin-left: 30px; */
+    border-radius: 20px 20px 20px 20px;
+    height: 65vh;
     
   }
   
@@ -28,26 +36,38 @@
     margin-bottom: 10px;
   }
   
-  .top-navbar {
+  .profile-container .top-navbar {
     background-color: #f0f0f0;
     color: #fff;
-    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     position: sticky;
     top: 0;
     z-index: 5;
     
   }
   
-  .top-navbar ul {
+  .profile-container .top-navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end;
-  }
+    justify-content:center;
   
-  .top-navbar li {
+  }
+  .profile-container .top-navbar ul li {
+    word-spacing: 5px;
+  }
+  .profile-container .top-navbar ul li a {
     margin-left: 10px;
+    text-decoration: none !important;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Mukta', sans-serif;
+    font-size: 13px;
+    letter-spacing: .9px;
+   
   }
   
   .data-area {
@@ -69,7 +89,6 @@
   
 
   /* Styles for the body (assuming this is the parent container) */
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
 
 body {
     display: flex;
@@ -98,6 +117,8 @@ p {
     background-color: white !important;
     border-radius: 16px;
     padding: 5px;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* Style for the profile image */
@@ -164,11 +185,11 @@ h1 {
     margin-bottom: 10px;
     font-size: 12px;
     font-family:'Times New Roman', Times, serif;
-    margin-left: 100px;
+    text-align: center;
 }
 
 .info{
-    color: rgb(65, 39, 209);
+    color: rgb(148, 133, 236);
     
 }
 
@@ -181,11 +202,11 @@ h1 {
   .cv button {
     background-color: #007bff; /* Blue color, you can change this to your desired color */
     color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding for the button */
+    padding: 10px 30px; /* Padding for the button */
     border: none; /* Remove border */
     border-radius: 10px; /* Rounded corners */
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     transition: background-color 0.3s ease; /* Smooth transition on hover */
   }
   
