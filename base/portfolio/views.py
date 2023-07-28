@@ -16,6 +16,12 @@ from .serializers import ProjectsSerializer,ContactSerializer
 from django.core.files.storage import default_storage
 import os
 from django.http import HttpResponseNotFound, FileResponse
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.authentication import TokenAuthentication
+
+
+
 
 @csrf_exempt
 def myProjects(request, id=None):
@@ -85,17 +91,19 @@ def getImage(request, filename):
         return HttpResponseNotFound("Image not found.")
 
 @csrf_exempt
+@api_view(["POST"])
+@authentication_classes([TokenAuthentication])  # Add TokenAuthentication
+@permission_classes([IsAuthenticated, IsAdminUser])  # Add IsAuthenticated and IsAdminUser permissions
 def contact_me(request):
-
+    # Your existing code here
     if request.method == 'POST':
         contact_data = JSONParser().parse(request)
         contact_serializer = ContactSerializer(data=contact_data)
         if contact_serializer.is_valid():
             contact_serializer.save()
-            return JsonResponse("Project added successfully", safe=False, status=201)
+            return JsonResponse("Contact added successfully", safe=False, status=201)
         return JsonResponse(contact_serializer.errors, safe=False, status=400)
     return JsonResponse("Method not allowed", safe=False, status=405)
-
 
 # class ProjectUpdateAPIView(generics.UpdateAPIView):
 #     """

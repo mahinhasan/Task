@@ -15,8 +15,8 @@
             <li class="show">
                 <a routerLink="/main/profile/tours">Tours</a>
               </li>
-            <li><a routerLink="/account/login">Login</a></li>
-            <li><a routerLink="/account/register">Register</a></li>
+            <li *ngIf="!myname"><a routerLink="/account/login">Login</a></li>
+            <li *ngIf="!myname"><a routerLink="/account/register">Register</a></li>
                 
         </ul>
     </nav>
@@ -54,13 +54,13 @@
             </div>
             <p>Python django developer</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/m8838" target="_blank">
+                <a href="https://www.facebook.com/m8838" >
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="www.linkedin.com/in/mhmahin" target="_blank">
+                <a href="www.linkedin.com/in/mhmahin" >
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/mahinhasan" target="_blank">
+                <a href="https://github.com/mahinhasan" >
                     <i class="fab fa-github"></i>
                 </a>
             </div>

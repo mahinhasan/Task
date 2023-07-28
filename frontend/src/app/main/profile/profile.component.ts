@@ -9,6 +9,7 @@ import { SharedService } from 'src/app/service/shared.service';
 export class ProfileComponent {
   showInfo: boolean = false;
   navlist: boolean = false;
+ 
 
   myname : string = '' ;
   constructor(private _service : SharedService){
@@ -57,6 +58,12 @@ export class ProfileComponent {
 
   toggleDropdown() {
     this.showDropdown = !this.showDropdown;
+  }
+
+  showMobileNav: boolean = false;
+
+  toggleMobileNav() {
+    this.showMobileNav = !this.showMobileNav;
   }
 
 }

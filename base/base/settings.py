@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'portfolio',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 # CORS_ORIGIN_ALLOW_ALL=True
@@ -129,6 +130,15 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
+# Add 'rest_framework.authtoken' to your INSTALLED_APPS
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 
 # Static files (CSS, JavaScript, Images)
