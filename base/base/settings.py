@@ -97,6 +97,7 @@ DATABASES = {
         'PASSWORD' : 'Mahin@97',
         'HOST' : '127.0.0.1',
         'POST':'5432'
+        
     }
 }
 
